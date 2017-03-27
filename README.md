@@ -10,3 +10,27 @@ cd tutorial
 bundle exec jekyll serve
 
 ```
+
+# Creating the Docker Container
+```bash
+cd tutorial-build
+docker build -t tutorial .
+
+```
+
+# Running the Docker Container
+```bash
+cd tutorial-build
+docker run -p 4000:4000 tutorial
+
+```
+
+# Stopping and Removing All Docker Containers
+* Open a new terminal window.
+```bash
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
+```
+* Note: there is no need to re-build the image after this.
+
