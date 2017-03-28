@@ -78,11 +78,34 @@ RUN bundle install
 CMD bundle exec jekyll serve --port 4000 --host 0.0.0.0
 ```
 
-#### Building the Container
+#### Building the Image
 
-### Running the Container
+Once the Dockerfile has been completed, it is time to build the actual image. To do this, it is necessary to be in the same directory as the Dockerfile. The "docker build" command is then used to build the image, as shown below.
+
+```bash
+cd tutorial-build
+docker build -t tutorial .
+```
+
+The "-t" option in the Docker command shown above gives the image that will be built a tag (in this case "tutorial") that can be used to refer to the image later on. Docker images are normally tracked by identifiers made up of letters and numbers, so giving an image a tag can make it easier to work with later on.
+
+Building the image may take some time, since it will download all of the dependencies. When this is done, however, you will have a completed Docker image!
+
+### Deploying & Running the Container
+#### Deploying the Container
+
 #### Starting the Container
+To do start running the container, it is necessary to be in the same directory as where the image was created. Then, the "docker run" command can be used to actually start running the container, as shown below.
+
+```bash
+cd tutorial-build
+docker run -p 4000:4000 tutorial
+```
+
+In the command shown above, the "-p" option is used to map a port on the container (in this case port 4000) to a port on the machine that is running the container (in this case also port 4000). This will direct any traffic on port 4000 of the machine to port 4000 in the container.
+
 #### Accessing the Application
+To access the tutorial site that is now running, use a Web browser and navigate to "http://0.0.0.0:4000". This should pull up the tutorial Web site running on the container!
 
 ### Terminating the Application in the Container
 #### Stoppping the Container
