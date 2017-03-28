@@ -161,7 +161,7 @@ This will list all images that are stored on your local machine. You should see 
 docker tag [tutorial-image-ID] [Docker-username]/tutorial:latest
 ```
 
-If you run 'docker images' again, you should see that there is now a new image in a different repository called [Docker-username]/tutorial and tagged latest. Now we need to push our local image to our remote rrepository. Enter the following commands:
+If you run 'docker images' again, you should see that there is now a new image in a different repository called [Docker-username]/tutorial and tagged latest. Now we need to push our local image to our remote repository. Enter the following commands:
 
 ```bash
 docker login
