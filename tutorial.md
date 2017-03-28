@@ -144,10 +144,10 @@ Building the image may take some time, since it will download all of the depende
 #### Using Docker Hub to Push and Pull Images
 One method of sharing images is to use Docker Hub (think github for Docker images). The first step is to sign up for a Docker ID account at https://hub.docker.com/register. After registering for an account and verifying your email, sign into your Docker Hub at https://hub.docker.com. Click on the option to create a new repository. You'll have the option to set the following:
 
-A) A namespace (i.e. does the repository belong to an organization you're a part of or just you).
-B) A name for the repository. Let's use the name "tutorial" for now.
-C) A short description of the repository (100 character max) and a longer description where you can put markdown.
-D) A public/private option. Public repos are visible to anyone and can be accessed by anyone. Use this for projects where you want to share your work.
+1. A namespace (i.e. does the repository belong to an organization you're a part of or just you).
+2. A name for the repository. Let's use the name "tutorial" for now.
+3. A short description of the repository (100 character max) and a longer description where you can put markdown.
+4. A public/private option. Public repos are visible to anyone and can be accessed by anyone. Use this for projects where you want to share your work.
 
 After creating your repository, the repo will still be blank. It's time to populate the repository with something. Go to your terminal and enter the following command:
 
