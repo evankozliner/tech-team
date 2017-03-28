@@ -178,7 +178,13 @@ docker run [Docker-username]/tutorial
 
 Docker will automatically pull the image from the remote server and run the image.
 
-# TO DO
+#### Advanced Deployment
+
+This section will cover some advanced deployment techniques. These are not part of the tutorial, so if you just want to follow the tutorial you can jump ahead to the next section, "Starting the Container". However, knowing basic information about these techniques is useful if you want to know what Docker is capable of. 
+
+Docker Machine is an important tool that allows you to install Docker Engine (what is conventionally thought of as "Docker") on virtual hosts. These hosts can then be managed with a new set of 'docker-machine' commands. This allows older Mac and Windows systems to run Docker, or allows you to create and manage hosts on remote cloud systems such as AWS. This is the easy and efficient way to manage multiple Docker hosts locally, on a network, or on the cloud.
+
+Swarm mode is the primary tool for achieving high scalability and performance using multiple systems. Swarm mode is a type of cluster management. You can define various nodes, which are really just an instance of the Docker Engine which will be participants in the swarm. Nodes you designate as manager nodes take a "service definition" and then assign tasks to nodes designated as worker nodes. Tasks are simply a docker container and the commands to run inside that container. Put together, swarm mode allows you to distribute workload across multiple hosts, with the guarantee that each host will be able to complete each task.
 
 #### Starting the Container
 To start running the container, it is necessary to be in the same directory as where the image was created. Then, the "docker run" command can be used to actually start running the container, as shown below.
