@@ -92,10 +92,45 @@ The "-t" option in the Docker command shown above gives the image that will be b
 Building the image may take some time, since it will download all of the dependencies. When this is done, however, you will have a completed Docker image!
 
 ### Deploying & Running the Container
-#### Deploying the Container
+#### Using Docker Hub to Push and Pull Images
+One method of sharing images is to use Docker Hub (think github for Docker images). The first step is to sign up for a Docker ID account at https://hub.docker.com/register. After registering for an account and verifying your email, sign into your Docker Hub at https://hub.docker.com. Click on the option to create a new repository. You'll have the option to set the following:
+
+A) A namespace (i.e. does the repository belong to an organization you're a part of or just you).
+B) A name for the repository. Let's use the name "tutorial" for now.
+C) A short description of the repository (100 character max) and a longer description where you can put markdown.
+D) A public/private option. Public repos are visible to anyone and can be accessed by anyone. Use this for projects where you want to share your work.
+
+After creating your repository, the repo will still be blank. It's time to populate the repository with something. Go to your terminal and enter the following command:
+
+```bash
+docker images
+```
+
+This will list all images that are stored on your local machine. You should see the tutorial image we created earlier, along with some columns with additional information. We wish to associate our local image with the remote repository. In order to do this, find the image ID for our tutorial image and use the following command:
+
+```bash
+docker tag [tutorial-image-ID] [Docker-username]/tutorial:latest
+```
+
+If you run 'docker images' again, you should see that there is now a new image in a different repository called [Docker-username]/tutorial and tagged latest. Now we need to push our local image to our remote rrepository. Enter the following commands:
+
+```bash
+docker login
+docker push [Docker-username]/tutorial:latest
+```
+
+The 'docker login' command will prompt you to login in to your Docker account. 'docker push' does exactly what you would think it does - pushes the image stored locally to your remote repository 'tutorial'. If you sign back into https://hub.docker.com you should see an image now in your repository. 
+
+Now anyone with access to your repository can download and run your image. On any computer that doesn't have the tutorial image simply run the following command:
+
+```bash
+docker run [Docker-username]/tutorial 
+```
+
+Docker will automatically pull the image from the remote server and run the image.
 
 #### Starting the Container
-To do start running the container, it is necessary to be in the same directory as where the image was created. Then, the "docker run" command can be used to actually start running the container, as shown below.
+To start running the container, it is necessary to be in the same directory as where the image was created. Then, the "docker run" command can be used to actually start running the container, as shown below.
 
 ```bash
 cd tutorial-build
