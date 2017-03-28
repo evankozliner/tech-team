@@ -109,6 +109,17 @@ To access the tutorial site that is now running, use a Web browser and navigate 
 
 ### Terminating the Application in the Container
 #### Stoppping the Container
+To stop all running containers, just execute the command shown below. Stopping the container will preserve its state.
+
+```bash
+docker stop $(docker ps -a -q)
+```
+
 #### Removing the Container
+Removing a stopped container will discard that container's state. To do this, execute the following command.
+
+```bash
+docker rm $(docker ps -a -q)
+```
 
 ## Conclusion
