@@ -4,7 +4,56 @@
 
 
 ## Installing Docker
+1. Update your package lists by running the following command.
 
+    ```bash
+    sudo apt-get update
+    ```
+
+2. Install the linux-image-extra-* packages using the command shown below.
+
+    ```bash
+    sudo apt-get install \
+        linux-image-extra-$(uname -r) \
+        linux-image-extra-virtual
+    ```
+
+3. Add some packages to enable downloading Docker securely.
+
+    ```bash
+    sudo apt-get install \
+        apt-transport-https \
+        ca-certificates \
+        curl \
+        software-properties-common
+    ```
+
+4. Add the GPG key for Docker.
+
+    ```bash
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    ```
+
+5. Add the repository for the latest stable version of Docker.
+
+    ```bash
+    sudo add-apt-repository \
+        "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+        $(lsb_release -cs) \
+        stable"
+    ```
+
+6. Install Docker CE with the command shown below.
+
+    ```bash
+    sudo apt-get install docker-ce
+    ```
+
+7. Verify that Docker works and has been installed correctly.
+
+    ```bash
+    sudo docker run hello-world
+    ```
 
 ## Using Docker to Create & Use Containers
 
@@ -128,6 +177,8 @@ docker run [Docker-username]/tutorial
 ```
 
 Docker will automatically pull the image from the remote server and run the image.
+
+# TO DO
 
 #### Starting the Container
 To start running the container, it is necessary to be in the same directory as where the image was created. Then, the "docker run" command can be used to actually start running the container, as shown below.
