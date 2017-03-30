@@ -8,8 +8,7 @@ independent, lightweight, cross-platform containers that run your program. These
 Docker isolates an applications code from its environment. Details such as networking and storage are abstracted away, this helps guarantee that an app will work when deployed or downloaded on another developers machine. 
 
 ## Compute Density
-You may be able to run six to eight times as many containers as virtual machines on the same hardware [according to infoworld][infoworld-url]. This is because docker containers share the kernel, unlike virtual machines that come with a fully-functional operating system. This can be appealing for high-scale environments who wish to save money on hardware. 
-
+You may be able to run six to eight times as many containers as virtual machines on the same hardware [according to InfoWorld][infoworld-url]. This is because docker containers share the kernel, unlike virtual machines that come with a fully-functional operating system. This can be appealing for high-scale environments who wish to save money on hardware.
 
 ## Installing Docker
 1. Update your package lists by running the following command.
