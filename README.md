@@ -1,8 +1,8 @@
-# tech-team
+# CSE5914 - Docker Tutorial
 
-See the [live site](https://evankozliner.github.io/tech-team/)
+Please see the [live site](https://evankozliner.github.io/tech-team/) for the actual tutorial.
 
-# To start working
+# To Start Working
 
 ```bash
 gem install jekyll bundler

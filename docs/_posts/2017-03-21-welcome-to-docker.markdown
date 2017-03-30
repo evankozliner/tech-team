@@ -9,7 +9,10 @@ Welcome to our tech team's tutorial!
 
 This blog is on the basics of using [Docker][docker-url], by the end of the tutorial you should have deployed a copy of this website, (which you can find on our [Github][github-url]) via Docker.
 
+Click [here][tutorial-url] to go to the tutorial.
+
 ![docker-whale]({{site.baseurl}}/assets/docker-whale.png)
 
 [docker-url]: https://www.docker.com/
 [github-url]: https://github.com/evankozliner/tech-team
+[tutorial-url]: https://github.com/evankozliner/tech-team/tutorial.html
