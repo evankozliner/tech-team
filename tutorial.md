@@ -130,10 +130,11 @@ CMD bundle exec jekyll serve --port 4000 --host 0.0.0.0
 
 #### Building the Image
 
-Once the Dockerfile has been completed, it is time to build the actual image. To do this, it is necessary to be in the same directory as the Dockerfile. The "docker build" command is then used to build the image, as shown below.
+Once the Dockerfile has been completed, it is time to build the actual image. To do this, it is necessary to be in the same directory as the Dockerfile. Next, Bundler will need to be used to ensure that the Gemfile.lock has the correct version numbers for the dependencies (this is a Ruby thing that is unrelated to Docker). The "docker build" command is then used to build the image, as shown below.
 
 ```bash
 cd tutorial-build
+bundle install
 docker build -t tutorial .
 ```
 
@@ -217,3 +218,5 @@ docker rm $(docker ps -a -q)
 
 ## Conclusion
 This tutorial has shown you how to install Docker, make basic Dockerfiles for your programs, build Docker images, and run them. You are now free to use Docker to make distributing your programs easier!
+
+*Note: The commands necessary for installation were taken from the Docker website.*
