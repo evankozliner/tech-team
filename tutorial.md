@@ -1,7 +1,8 @@
 # CSE 5914 - Docker Tutorial
 
 ## What is Docker?
-
+Docker is a containerization service. It puts your software into 
+independent, lightweight, cross-platform containers that run your program. These containers are run like virtual machines by Docker itself. Thus, a program created on one system can be put into a Docker container that can in turn be run on any machine with Docker installed. This makes it possible to distribute complex applications in a platform-independent manner.
 
 ## Installing Docker
 1. Update your package lists by running the following command.
@@ -215,3 +216,4 @@ docker rm $(docker ps -a -q)
 ```
 
 ## Conclusion
+This tutorial has shown you how to install Docker, make basic Dockerfiles for your programs, build Docker images, and run them. You are now free to use Docker to make distributing your programs easier!
