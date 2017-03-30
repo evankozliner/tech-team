@@ -29,8 +29,7 @@ Docker isolates an applications code from its environment. Details such as netwo
 You may be able to run six to eight times as many containers as virtual machines on the same hardware [according to infoworld][infoworld-url]. This can be appealing for high-scale environments who wish to save on hardware. 
 
 ## Single Process
-* Containers must be a single process so applications that run subprocesses will need to break their subprocesses into seperate containers for Docker to work. Oftentimes this is an easy fix and allows for more precise updates. This could save a developer from needing to shut off a database in order to update a web server.
-
+* Containers must be a single process so applications that run subprocesses will need to break their subprocesses into seperate containers for Docker to work, oftentimes this is an easy fix and allows for more precise updates. This could save a developer from needing to shut off a database in order to update a web server.
 
 [docker-url]: https://www.docker.com/
 [github-url]: https://github.com/evankozliner/tech-team
