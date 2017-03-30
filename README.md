@@ -2,6 +2,8 @@
 
 Please see the [live site](https://evankozliner.github.io/tech-team/) for the actual tutorial.
 
+This repository contains two directories with essentially the same tutorial inside each of them. The "docs" directory contains the version of the tutorial for use by GitHub Pages, whereas the "tutorial-build" directory contains the version of the tutorial appropriate for being built with Docker.
+
 # To Start Working
 
 ```bash
@@ -10,9 +12,6 @@ cd tutorial
 bundle exec jekyll serve
 
 ```
-
-# Important Note
-The site needs to be distributed with the proper Gemfile.lock. There were issues with the github-pages gem, so this has been removed from the Gemfile for distribution.
 
 # Creating the Docker Container
 ```bash
